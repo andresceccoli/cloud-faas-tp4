@@ -28,13 +28,22 @@ Okteto no soporta el LoadBalancer que sugiere la guia (https://github.com/minio/
 kubectl create -f minio-clusterip-service.yaml
 ```
 
-## Conectar la funcion con MinIO
+## Administrar MinIO con la herramienta mc
+
+https://docs.min.io/docs/minio-client-quickstart-guide.html
+
+## Conectar OpenFaas con MinIO
 
 Crear funcion node con faas-cli y agregar el cliente minio para javascript  
 
 https://docs.min.io/docs/javascript-client-quickstart-guide.html
 
 Tener en cuenta el endPoint y puerto correcto dependiendo del deployment de minio.
+
+#### Funciones
+Implementar las siguientes funciones:
+- Crear bucket: crea un nuevo bucket solo si no existe. En caso de existir, debe retornar un mensaje indicando la situacion.
+- Listar buckets: devuelve la lista de buckets creados
 
 
 ## Cleanup
